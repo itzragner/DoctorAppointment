@@ -17,7 +17,7 @@ class _AppointmentCardState extends State<AppointmentCard> {
         color: Config.primaryColor,
         borderRadius: BorderRadius.circular(10),
       ),
-      child: const Material(
+      child:  const Material(
         color: Colors.transparent,
         child: Padding(
           padding: EdgeInsets.all(20),
@@ -30,7 +30,23 @@ class _AppointmentCardState extends State<AppointmentCard> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[],
+                children: <Widget>[
+                  Text(
+                    'Dr. John Doe',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 2,
+                  ), Text(
+                    'Cardiologist',
+                    style: TextStyle(
+                      color: Colors.black38,
+                    ),
+                  ),
+
+                ],
               ),
             ],
           ) ,

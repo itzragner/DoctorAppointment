@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:untitled/components/appointment_card.dart';
 import 'package:untitled/utils/config.dart';
 
 class HomePage extends StatefulWidget {
@@ -122,6 +123,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Config.spaceSmall,
+              AppointmentCard(),
             ],
           ),
         ),
