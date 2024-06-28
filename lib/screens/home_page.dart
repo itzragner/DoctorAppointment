@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
@@ -82,7 +82,9 @@ class _HomePageState extends State<HomePage> {
                 height: Config.heightSize * 0.05,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: List<Widget>.generate(medCat.length, (index) {
+                  children: List<Widget>.generate(
+                    medCat.length,
+                    (index) {
                       return Card(
                         margin: const EdgeInsets.only(right: 20),
                         color: Config.primaryColor,
@@ -98,7 +100,9 @@ class _HomePageState extends State<HomePage> {
                                 medCat[index]['icon'],
                                 color: Colors.white,
                               ),
-                              const SizedBox(width: 20,),
+                              const SizedBox(
+                                width: 20,
+                              ),
                               Text(
                                 medCat[index]['category'],
                                 style: const TextStyle(
@@ -123,7 +127,15 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Config.spaceSmall,
-              AppointmentCard(),
+              const AppointmentCard(),
+              Config.spaceSmall,
+              const Text(
+                'Top Doctors',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
         ),
